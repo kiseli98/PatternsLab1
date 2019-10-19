@@ -1,0 +1,5 @@
+package Display;
+
+public interface DisplayElement {
+    void display();
+}
