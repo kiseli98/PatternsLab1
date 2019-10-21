@@ -21,17 +21,17 @@ public class WeatherServer {
     }
 
     public float getTemperature() {
-        int i = new Random().nextInt(2 + 1);
+        int i = new Random().nextInt(temperature.length);
         return temperature[i];
     }
 
     public float getHumidity() {
-        int i = new Random().nextInt(2 + 1);
+        int i = new Random().nextInt(humidity.length);
         return humidity[i];
     }
 
     public float getPressure() {
-        int i = new Random().nextInt(2 + 1);
+        int i = new Random().nextInt(pressure.length);
         return pressure[i];
     }
 }

@@ -5,7 +5,7 @@ package WeatherStation;
 
 import Display.DisplayElement;
 import Display.DisplayType;
-import DisplayFactory.DisplayFactory;
+import Display.DisplayFactory;
 import Proxy.ProxyServerConnection;
 import Proxy.WeatherServer;
 

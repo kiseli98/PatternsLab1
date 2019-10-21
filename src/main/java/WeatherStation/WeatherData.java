@@ -42,7 +42,7 @@ public class WeatherData implements Subject {
     }
 
     public void notifyObservers() {
-        if(changed){
+        if (changed) {
             for (Observer observer : observers) {
                 observer.update(temperature, humidity, pressure);
             }
@@ -56,10 +56,17 @@ public class WeatherData implements Subject {
     }
 
     public void setMeasurements(float temperature, float humidity, float pressure) {
+        boolean tempChanged = Math.abs(this.temperature - temperature) > 0.01f;
+        boolean humidityChanged = Math.abs(this.humidity - humidity) > 0.01f;
+        boolean pressureChanged = Math.abs(this.pressure - pressure) > 0.01f;
+
         this.temperature = temperature;
         this.humidity = humidity;
         this.pressure = pressure;
-        measurementsChanged();
+
+        if (tempChanged || humidityChanged || pressureChanged){
+            measurementsChanged();
+        }
     }
 
     public float getTemperature() {

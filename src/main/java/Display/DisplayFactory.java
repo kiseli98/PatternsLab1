@@ -1,4 +1,4 @@
-package DisplayFactory;
+package Display;
 
 import Display.*;
 import WeatherStation.WeatherData;
